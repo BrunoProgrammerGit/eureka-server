@@ -1,0 +1,16 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false # el servidor no se registra a sí mismo
+    fetch-registry: false # ni descarga el registro
+  server:
+    enable-self-preservation: false # SOLO desarrollo
+    eviction-interval-timer-in-ms: 5000 # expulsa instancias caídas más rápido
